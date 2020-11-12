@@ -10,5 +10,7 @@ export default createGlobalStyle`
     html,body,#root {
         background-color: #dfe6e9;
         font-family: 'San Francisco';
+
+        margin: 0 auto;
     }
 `;
