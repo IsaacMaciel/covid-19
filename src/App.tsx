@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import "./App.css";
+import './App.css';
 
-import GlobalStyles from "./GlobalStyles";
+import GlobalStyles from './GlobalStyles';
 
-import Index from "./Page/index";
+import Index from './Page/index';
 
 function App() {
-    return (
-        <>
-            <Index />
-            <GlobalStyles />
-        </>
-    );
+  return (
+    <>
+      <Index />
+      <GlobalStyles />
+    </>
+  );
 }
 
 export default App;
