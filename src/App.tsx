@@ -6,13 +6,11 @@ import GlobalStyles from './GlobalStyles';
 
 import Index from './Page/index';
 
-function App() {
-  return (
-    <>
-      <Index />
-      <GlobalStyles />
-    </>
-  );
-}
+const App: React.FC = () => (
+  <>
+    <Index />
+    <GlobalStyles />
+  </>
+);
 
 export default App;

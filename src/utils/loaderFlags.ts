@@ -26,119 +26,113 @@ import SE from '../assets/flags/SE.png';
 import SP from '../assets/flags/SP.png';
 import TO from '../assets/flags/TO.png';
 
-const luiz = 'nome';
-
-const loaderFlags = (): object => {
-  return {
-    AC: {
-      title: 'Acre',
-      src: AC,
-    },
-    AL: {
-      title: 'Alagoas',
-      src: AL,
-    },
-    AP: {
-      title: 'Amapá',
-      src: AP,
-    },
-    AM: {
-      title: 'Amazonas',
-      src: AM,
-    },
-    BA: {
-      title: 'Bahia',
-      src: BA,
-    },
-    CE: {
-      title: 'Ceara',
-      src: CE,
-    },
-    DF: {
-      title: 'Distrito Federal',
-      src: DF,
-    },
-    ES: {
-      title: 'Espírito Santo',
-      src: ES,
-    },
-    GO: {
-      title: 'Goiás',
-      src: GO,
-    },
-    MA: {
-      title: 'Maranhão',
-      src: MA,
-    },
-    MT: {
-      title: 'Mato Grosso',
-      src: MT,
-    },
-    MS: {
-      title: 'Mato Grosso do Sul',
-      src: MS,
-    },
-    MG: {
-      title: 'Minas Gerais',
-      src: MG,
-    },
-    PA: {
-      title: 'Pará',
-      src: PA,
-    },
-    PB: {
-      title: 'Paraíba',
-      src: PB,
-    },
-    PR: {
-      title: 'Paraná',
-      src: PR,
-    },
-    PE: {
-      title: 'Pernambuco',
-      src: PE,
-    },
-    PI: {
-      title: 'Piauí',
-      src: PI,
-    },
-    RJ: {
-      title: 'Rio de Janeiro',
-      src: RJ,
-    },
-    RN: {
-      title: 'Rio Grande do Norte',
-      src: RN,
-    },
-    RS: {
-      title: 'Rio Grande do Sul',
-      src: RS,
-    },
-    RO: {
-      title: 'Rondônia',
-      src: RO,
-    },
-    RR: {
-      title: 'Roraima',
-      src: RR,
-    },
-    SC: {
-      title: 'Santa Catarina',
-      src: SC,
-    },
-    SP: {
-      title: 'São Paulo',
-      src: SP,
-    },
-    SE: {
-      title: 'Segipe',
-      src: SE,
-    },
-    TO: {
-      title: 'Tocantins',
-      src: TO,
-    },
-  };
-};
-
-export default loaderFlags;
+export default [
+  {
+    title: 'Acre',
+    src: AC,
+  },
+  {
+    title: 'Alagoas',
+    src: AL,
+  },
+  {
+    title: 'Amapá',
+    src: AP,
+  },
+  {
+    title: 'Amazonas',
+    src: AM,
+  },
+  {
+    title: 'Bahia',
+    src: BA,
+  },
+  {
+    title: 'Ceara',
+    src: CE,
+  },
+  {
+    title: 'Distrito Federal',
+    src: DF,
+  },
+  {
+    title: 'Espírito Santo',
+    src: ES,
+  },
+  {
+    title: 'Goiás',
+    src: GO,
+  },
+  {
+    title: 'Maranhão',
+    src: MA,
+  },
+  {
+    title: 'Mato Grosso',
+    src: MT,
+  },
+  {
+    title: 'Mato Grosso do Sul',
+    src: MS,
+  },
+  {
+    title: 'Minas Gerais',
+    src: MG,
+  },
+  {
+    title: 'Pará',
+    src: PA,
+  },
+  {
+    title: 'Paraíba',
+    src: PB,
+  },
+  {
+    title: 'Paraná',
+    src: PR,
+  },
+  {
+    title: 'Pernambuco',
+    src: PE,
+  },
+  {
+    title: 'Piauí',
+    src: PI,
+  },
+  {
+    title: 'Rio de Janeiro',
+    src: RJ,
+  },
+  {
+    title: 'Rio Grande do Norte',
+    src: RN,
+  },
+  {
+    title: 'Rio Grande do Sul',
+    src: RS,
+  },
+  {
+    title: 'Rondônia',
+    src: RO,
+  },
+  {
+    title: 'Roraima',
+    src: RR,
+  },
+  {
+    title: 'Santa Catarina',
+    src: SC,
+  },
+  {
+    title: 'São Paulo',
+    src: SP,
+  },
+  {
+    title: 'Segipe',
+    src: SE,
+  },
+  {
+    title: 'Tocantins',
+    src: TO,
+  },
+];
