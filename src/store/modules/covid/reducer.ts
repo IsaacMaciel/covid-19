@@ -1,0 +1,39 @@
+import { Reducer } from 'redux';
+import { action } from 'typesafe-actions';
+
+import { InitialState, CovidInfoTypes, CovidAction } from './types';
+
+const INITIAL_STATE: InitialState = {
+  country: {
+    country: '',
+    cases: 0,
+    confirmed: 0,
+    deaths: 0,
+    recovered: 0,
+    updated_at: '',
+  },
+  uf: {
+    uid: 0,
+    uf: '',
+    cases: 0,
+    state: '',
+    suspects: 0,
+    refuses: 0,
+    datetime: '',
+  },
+  params: '',
+};
+
+const reducer = (state = INITIAL_STATE, action: CovidAction) => {
+  switch (action.type) {
+    case CovidInfoTypes.GET_COUNTRY_INFO:
+      return { ...state, params: action.payload };
+
+    case CovidInfoTypes.INPUT_COUNTRY_INFO:
+      return { ...state, country: action.payload };
+
+    default:
+      return state;
+  }
+};
+export default reducer;

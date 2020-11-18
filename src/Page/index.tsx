@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Header from '../components/Header';
-import Card from '../components/Card';
+import Content from '../components/Content';
 
 const Index: React.FC = () => (
   <>
     <Header />
-    <Card />
+    <Content />
   </>
 );
 

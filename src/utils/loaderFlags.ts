@@ -1,3 +1,4 @@
+import BR from '../assets/flags/BR.png';
 import AC from '../assets/flags/AC.png';
 import AL from '../assets/flags/AL.png';
 import AM from '../assets/flags/AM.png';
@@ -27,6 +28,10 @@ import SP from '../assets/flags/SP.png';
 import TO from '../assets/flags/TO.png';
 
 export default [
+  {
+    title: 'Brasil',
+    src: BR,
+  },
   {
     title: 'Acre',
     src: AC,
