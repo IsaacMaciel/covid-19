@@ -28,7 +28,6 @@ export interface IFlag {
 type Props = IData & IFlag;
 
 const Card: React.FC<Props> = ({ data, flag }) => {
-  console.log(flag);
   const dataFormmated = formatData(data);
   return (
     <Container>

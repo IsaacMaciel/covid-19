@@ -15,13 +15,15 @@ const INITIAL_STATE: InitialState = {
     },
   },
   uf: {
-    uid: 0,
-    uf: '',
-    cases: 0,
-    state: '',
-    suspects: 0,
-    refuses: 0,
-    datetime: '',
+    data: {
+      uid: 0,
+      uf: '',
+      cases: 0,
+      state: '',
+      suspects: 0,
+      refuses: 0,
+      datetime: '',
+    },
   },
   params: '',
 };
@@ -33,6 +35,12 @@ const reducer = (state = INITIAL_STATE, action: CovidAction) => {
 
     case CovidInfoTypes.INPUT_COUNTRY_INFO:
       return { ...state, country: action.payload };
+
+    case CovidInfoTypes.GET_UF_INFO:
+      return { ...state, params: action.payload };
+
+    case CovidInfoTypes.INPUT_UF_INFO:
+      return { ...state, uf: action.payload };
 
     default:
       return state;

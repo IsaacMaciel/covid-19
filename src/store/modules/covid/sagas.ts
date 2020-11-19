@@ -27,3 +27,13 @@ export function* loadCountryInfo({
 //   const response = yield call(api.get, `/brazil/uf/${uf}`);
 //   yield put(getUFInfo(response.data));
 // }
+
+export function* loadUfInfo({ payload }: ActionType<typeof actions.getUFInfo>) {
+  try {
+    const UF = payload;
+    const { data } = yield call(api.get, `/brazil/uf/${UF}`);
+    yield put(actions.inputUFInfo(data));
+  } catch (error) {
+    console.log(error);
+  }
+}

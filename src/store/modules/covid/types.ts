@@ -9,13 +9,15 @@ export enum CovidInfoTypes {
 }
 
 export interface UF {
-  uid: number;
-  uf: string;
-  state: string;
-  cases: number;
-  suspects: number;
-  refuses: number;
-  datetime: string;
+  data: {
+    uid: number;
+    uf: string;
+    state: string;
+    cases: number;
+    suspects: number;
+    refuses: number;
+    datetime: string;
+  };
 }
 // export interface RepositoriesUF {
 //   data: UF[];

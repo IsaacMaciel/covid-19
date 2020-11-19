@@ -13,6 +13,7 @@ import { getCountryInfo } from '../../store/modules/covid/actions';
 
 const Content: React.FC = () => {
   const covid = useSelector((state: StoreState) => state.covid);
+  console.log(covid);
 
   const dispatch = useDispatch();
 

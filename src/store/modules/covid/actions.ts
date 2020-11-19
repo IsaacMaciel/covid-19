@@ -6,5 +6,7 @@ export const getCountryInfo = (country: string) =>
 export const inputCountryInfo = (data: Country) =>
   action(CovidInfoTypes.INPUT_COUNTRY_INFO, data);
 
-// export const getUFInfo = (data: UF) => action(CovidInfoTypes.GET_UF_INFO, data);
+export const getUFInfo = (UF: string) => action(CovidInfoTypes.GET_UF_INFO, UF);
+export const inputUFInfo = (data: UF) =>
+  action(CovidInfoTypes.INPUT_UF_INFO, data);
 // export const inputUfInfo
