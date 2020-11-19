@@ -22,12 +22,14 @@ export interface UF {
 // }
 
 export interface Country {
-  country: string;
-  cases: number;
-  confirmed: number;
-  deaths: number;
-  recovered: number;
-  updated_at: string;
+  data: {
+    country: string;
+    cases: number;
+    confirmed: number;
+    deaths: number;
+    recovered: number;
+    updated_at: string;
+  };
 }
 
 // export interface RepositoriesCountry {

@@ -5,27 +5,33 @@ import br from '../../assets/flags/BR.png';
 
 import Label from '../Label/';
 
+import formatData from '../../utils/dataFormmat';
+
 import { FaCheck } from 'react-icons/fa';
 import { FiInfo } from 'react-icons/fi';
 import { ImWarning } from 'react-icons/im';
 import { GiHealthNormal, GiDeathSkull } from 'react-icons/gi';
 
-interface ICard {
-  data: {
-    cases: number;
-    confirmed: number;
-    country: string;
-    deaths: number;
-    recovered: number;
-    updated_at: string;
-  };
+import { Country } from '../../store/modules/covid/types';
+
+export interface IData {
+  data: Country;
+}
+
+export interface IFlag {
   flag: {
     title: string;
     src: any;
   };
 }
 
-const Card: React.FC<ICard> = ({ data, flag }) => {
+type Props = IData & IFlag;
+
+const Card: React.FC<Props> = (props) => {
+  const { flag, data } = props;
+
+  const dataFormmated = formatData(data);
+  console.log(dataFormmated);
   return (
     <Container>
       <Header>
@@ -33,19 +39,19 @@ const Card: React.FC<ICard> = ({ data, flag }) => {
         <Title>{flag.title}</Title>
       </Header>
       <Body>
-        <Label field="Confirmados" text={String(data.confirmed)}>
+        <Label field="Confirmados" text={dataFormmated.confirmed}>
           <FaCheck color="#27ae60" />
         </Label>
-        <Label field="Ativos" text={String(data.cases)}>
+        <Label field="Ativos" text={dataFormmated.cases}>
           <ImWarning color="#d63031" />
         </Label>
-        <Label field="Recuperados" text={String(data.recovered)}>
+        <Label field="Recuperados" text={dataFormmated.recovered}>
           <GiHealthNormal color="#27ae60" />
         </Label>
-        <Label field="Mortos" text={String(data.deaths)}>
+        <Label field="Mortos" text={dataFormmated.deaths}>
           <GiDeathSkull color="#636e72" />
         </Label>
-        <Label field="Atualizado em" text={data.updated_at}>
+        <Label field="Atualizado em" text={dataFormmated.updated_at}>
           <FiInfo color="#0984e3" />
         </Label>
       </Body>

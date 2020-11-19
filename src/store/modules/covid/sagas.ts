@@ -16,9 +16,8 @@ export function* loadCountryInfo({
   try {
     const country = payload;
     const { data } = yield call(api.get, `/${country}`);
-    // console.log(data.data);
 
-    yield put(actions.inputCountryInfo(data.data));
+    yield put(actions.inputCountryInfo(data));
   } catch (error) {
     console.log(error);
   }

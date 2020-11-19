@@ -5,12 +5,14 @@ import { InitialState, CovidInfoTypes, CovidAction } from './types';
 
 const INITIAL_STATE: InitialState = {
   country: {
-    country: '',
-    cases: 0,
-    confirmed: 0,
-    deaths: 0,
-    recovered: 0,
-    updated_at: '',
+    data: {
+      country: '',
+      cases: 0,
+      confirmed: 0,
+      deaths: 0,
+      recovered: 0,
+      updated_at: '',
+    },
   },
   uf: {
     uid: 0,
