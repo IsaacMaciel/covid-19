@@ -1,28 +1,16 @@
 import React, { useEffect } from 'react';
 
-// import { getBrasilInfo } from '../../services/covidService';
-
 import flags from '../../utils/loaderFlags';
 
 import Card from '../Card';
+import List from '../List';
 
-// import { AplicationState } from '../../store/createStore';
 import { InitialState } from '../../store/modules/covid/types';
 import { useSelector, useDispatch } from 'react-redux';
 import { StoreState } from '../../store/createStore';
-// import { bindActionCreators, Dispatch } from 'redux';
 
 import { getCountryInfo } from '../../store/modules/covid/actions';
 
-// interface StateProps {
-//   data: InitialState;
-// }
-// interface DispatchProps {
-//   getCountryInfo(): void;
-//   getUFInfo(): void;
-// }
-
-// type Props = StateProps;
 const Content: React.FC = () => {
   const covid = useSelector((state: StoreState) => state.covid);
 
@@ -38,10 +26,14 @@ const Content: React.FC = () => {
     return Object(br);
   };
 
-  console.log(covid);
-  console.log(getBrCountry());
-
-  return <Card data={covid.country} flag={getBrCountry()} />;
+  return (
+    <>
+      <Card data={covid.country} flag={getBrCountry()} />
+      {flags.map(({ title, src }) => (
+        <List title={title} src={src} />
+      ))}
+    </>
+  );
 };
 
 export default Content;

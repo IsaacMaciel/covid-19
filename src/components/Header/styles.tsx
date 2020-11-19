@@ -12,7 +12,7 @@ const rotate = keyframes`
 export const Container = styled.div`
   padding: 30px;
   width: 100%;
-  height: 56px;
+  height: 125px;
 
   text-align: center;
 `;
@@ -26,6 +26,5 @@ export const Text = styled.h4`
 export const Img = styled.img`
   width: 75px;
   height: 75px;
-  color: red;
   animation: ${rotate} 20s linear infinite;
 `;
