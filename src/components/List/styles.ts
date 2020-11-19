@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const Body = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 `;
 
 export const Flag = styled.img`

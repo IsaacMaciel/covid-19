@@ -23,7 +23,7 @@ const Content: React.FC = () => {
   const getBrCountry = () => {
     const br = flags.filter((flag) => flag.title === 'Brasil');
 
-    return Object(br);
+    return Object(br[0]);
   };
 
   return (

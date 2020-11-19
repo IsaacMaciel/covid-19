@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Body, Container, Header, Img, Title } from './styles';
+import { Body, Container, Header, Flag, Title } from './styles';
 
 import br from '../../assets/flags/BR.png';
 
@@ -21,18 +21,19 @@ export interface IData {
 export interface IFlag {
   flag: {
     title: string;
-    src: any;
+    src: string;
   };
 }
 
 type Props = IData & IFlag;
 
 const Card: React.FC<Props> = ({ data, flag }) => {
+  console.log(flag);
   const dataFormmated = formatData(data);
   return (
     <Container>
       <Header>
-        <Img src={flag.src}></Img>
+        <Flag src={flag.src} />
         <Title>{flag.title}</Title>
       </Header>
       <Body>

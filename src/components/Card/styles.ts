@@ -9,6 +9,7 @@ export const Container = styled.div`
   background-color: #1a1a1d;
 
   padding: 20px;
+  margin-bottom: 20px;
 `;
 
 export const Header = styled.div`
@@ -20,13 +21,14 @@ export const Header = styled.div`
 export const Title = styled.h4`
   font-size: 16px;
   font-weight: bold;
-
   margin: 0;
 `;
 
-export const Img = styled.img`
+export const Flag = styled.img`
   width: 100px;
   height: 100px;
+
+  margin-bottom: 10px;
 `;
 
 export const Body = styled.div`
