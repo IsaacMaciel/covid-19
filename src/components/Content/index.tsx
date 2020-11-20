@@ -9,7 +9,7 @@ import { InitialState } from '../../store/modules/covid/types';
 import { useSelector, useDispatch } from 'react-redux';
 import { StoreState } from '../../store/createStore';
 
-import { getCountryInfo } from '../../store/modules/covid/actions';
+import { getCountryInfo, getUFInfo } from '../../store/modules/covid/actions';
 
 const Content: React.FC = () => {
   const covid = useSelector((state: StoreState) => state.covid);
@@ -19,6 +19,7 @@ const Content: React.FC = () => {
 
   useEffect(() => {
     dispatch(getCountryInfo('brazil'));
+    dispatch(getUFInfo('sp'));
   }, []);
 
   const getBrCountry = () => {
@@ -30,8 +31,8 @@ const Content: React.FC = () => {
   return (
     <>
       <Card data={covid.country} flag={getBrCountry()} />
-      {flags.map(({ title, src }) => (
-        <List title={title} src={src} />
+      {flags.map(({ title, src }, index) => (
+        <List key={index} title={title} src={src} />
       ))}
     </>
   );

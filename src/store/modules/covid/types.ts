@@ -14,6 +14,7 @@ export interface UF {
     uf: string;
     state: string;
     cases: number;
+    deaths: number;
     suspects: number;
     refuses: number;
     datetime: string;

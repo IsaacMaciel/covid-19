@@ -19,6 +19,7 @@ const INITIAL_STATE: InitialState = {
       uid: 0,
       uf: '',
       cases: 0,
+      deaths: 0,
       state: '',
       suspects: 0,
       refuses: 0,
