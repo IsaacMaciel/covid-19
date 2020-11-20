@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import flags from '../../utils/loaderFlags';
 
 import Card from '../Card';
 import List from '../List';
+import Search from '../Search';
 
 import { InitialState } from '../../store/modules/covid/types';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,6 +13,8 @@ import { StoreState } from '../../store/createStore';
 import { getCountryInfo, getUFInfo } from '../../store/modules/covid/actions';
 
 const Content: React.FC = () => {
+  const [arrayFlags, setArrayFlags] = useState(flags);
+
   const covid = useSelector((state: StoreState) => state.covid);
   console.log(covid);
 
@@ -31,8 +34,9 @@ const Content: React.FC = () => {
   return (
     <>
       <Card data={covid.country} flag={getBrCountry()} />
-      {flags.map(({ title, src }, index) => (
-        <List key={index} title={title} src={src} />
+      <Search />
+      {arrayFlags.map(({ title, src, apiParams }, index) => (
+        <List apiParams={apiParams} key={index} title={title} src={src} />
       ))}
     </>
   );

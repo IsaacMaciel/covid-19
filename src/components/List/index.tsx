@@ -1,14 +1,23 @@
 import React from 'react';
 import { Container, Body, Text, Flag } from './styles';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { StoreState } from '../../store/createStore';
+import { getUFInfo } from '../../store/modules/covid/actions';
+
 export interface Flag {
   title: string;
   src: string;
+  apiParams: string;
 }
 
-const List: React.FC<Flag> = ({ title, src }) => {
+const List: React.FC<Flag> = ({ title, src, apiParams }) => {
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(getUFInfo(apiParams));
+  };
   return (
-    <Container>
+    <Container onClick={(e) => handleClick()}>
       <Body>
         <Flag src={src} />
         <Text>{title}</Text>

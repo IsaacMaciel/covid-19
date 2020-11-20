@@ -31,113 +31,141 @@ export default [
   {
     title: 'Brasil',
     src: BR,
+    apiParams: '',
   },
   {
     title: 'Acre',
     src: AC,
+    apiParams: 'ac',
   },
   {
     title: 'Alagoas',
     src: AL,
+    apiParams: 'al',
   },
   {
     title: 'Amapá',
     src: AP,
+    apiParams: 'ap',
   },
   {
     title: 'Amazonas',
     src: AM,
+    apiParams: 'am',
   },
   {
     title: 'Bahia',
     src: BA,
+    apiParams: 'ba',
   },
   {
     title: 'Ceara',
     src: CE,
+    apiParams: 'ce',
   },
   {
     title: 'Distrito Federal',
     src: DF,
+    apiParams: 'df',
   },
   {
     title: 'Espírito Santo',
     src: ES,
+    apiParams: 'es',
   },
   {
     title: 'Goiás',
     src: GO,
+    apiParams: 'go',
   },
   {
     title: 'Maranhão',
     src: MA,
+    apiParams: 'ma',
   },
   {
     title: 'Mato Grosso',
     src: MT,
+    apiParams: 'mt',
   },
   {
     title: 'Mato Grosso do Sul',
     src: MS,
+    apiParams: 'ms',
   },
   {
     title: 'Minas Gerais',
     src: MG,
+    apiParams: 'mg',
   },
   {
     title: 'Pará',
     src: PA,
+    apiParams: 'pa',
   },
   {
     title: 'Paraíba',
     src: PB,
+    apiParams: 'pb',
   },
   {
     title: 'Paraná',
     src: PR,
+    apiParams: 'pr',
   },
   {
     title: 'Pernambuco',
     src: PE,
+    apiParams: 'pe',
   },
   {
     title: 'Piauí',
     src: PI,
+    apiParams: 'pi',
   },
   {
     title: 'Rio de Janeiro',
     src: RJ,
+    apiParams: 'rj',
   },
   {
     title: 'Rio Grande do Norte',
     src: RN,
+    apiParams: 'rn',
   },
   {
     title: 'Rio Grande do Sul',
     src: RS,
+    apiParams: 'rs',
   },
   {
     title: 'Rondônia',
     src: RO,
+    apiParams: 'ro',
   },
   {
     title: 'Roraima',
     src: RR,
+    apiParams: 'rr',
   },
   {
     title: 'Santa Catarina',
     src: SC,
+    apiParams: 'sc',
   },
   {
     title: 'São Paulo',
     src: SP,
+    apiParams: 'sp',
   },
   {
     title: 'Segipe',
     src: SE,
+    apiParams: 'se',
   },
   {
     title: 'Tocantins',
     src: TO,
+    apiParams: 'to',
   },
 ];
