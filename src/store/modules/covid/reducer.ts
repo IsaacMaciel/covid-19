@@ -1,5 +1,4 @@
-import { Reducer } from 'redux';
-import { action } from 'typesafe-actions';
+import isLoadDataUf from '../../../utils/isLoadDataUF';
 
 import { InitialState, CovidInfoTypes, CovidAction } from './types';
 
@@ -15,16 +14,14 @@ const INITIAL_STATE: InitialState = {
     },
   },
   uf: {
-    data: {
-      uid: 0,
-      uf: '',
-      cases: 0,
-      deaths: 0,
-      state: '',
-      suspects: 0,
-      refuses: 0,
-      datetime: '',
-    },
+    uid: 0,
+    uf: '',
+    cases: 0,
+    deaths: 0,
+    state: '',
+    suspects: 0,
+    refuses: 0,
+    datetime: '',
   },
   params: '',
   search: '',
@@ -33,7 +30,7 @@ const INITIAL_STATE: InitialState = {
 const reducer = (state = INITIAL_STATE, action: CovidAction) => {
   switch (action.type) {
     case CovidInfoTypes.GET_COUNTRY_INFO:
-      return { ...state, params: action.payload };
+      return { ...state, params: '' };
 
     case CovidInfoTypes.INPUT_COUNTRY_INFO:
       return { ...state, country: action.payload };
@@ -42,7 +39,8 @@ const reducer = (state = INITIAL_STATE, action: CovidAction) => {
       return { ...state, params: action.payload };
 
     case CovidInfoTypes.INPUT_UF_INFO:
-      return { ...state, uf: action.payload };
+      if (isLoadDataUf(action.payload)) return { ...state, uf: action.payload };
+      return { ...state };
     case CovidInfoTypes.SEARCH:
       return { ...state, search: action.payload };
 

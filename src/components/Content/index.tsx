@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import flags from '../../utils/loaderFlags';
 
 import Card from '../Card';
+import CardUF from '../CardUF';
 import List from '../List';
 import Search from '../Search';
 
@@ -23,7 +24,6 @@ const Content: React.FC = () => {
 
   useEffect(() => {
     dispatch(getCountryInfo('brazil'));
-    dispatch(getUFInfo('sp'));
   }, []);
 
   useEffect(() => {
@@ -37,14 +37,22 @@ const Content: React.FC = () => {
   }, [covid.search]);
 
   const getBrCountry = () => {
-    const br = flags.filter((flag) => flag.title === 'Brasil');
+    const br = flags.filter((flag) => flag.title === 'Brasil')[0];
 
-    return Object(br[0]);
+    return br;
   };
 
   return (
     <>
-      <Card data={covid.country} flag={getBrCountry()} />
+      {' '}
+      {covid.params !== '' ? (
+        <CardUF
+          data={covid.uf}
+          flag={flags.filter((flag) => flag.apiParams === covid.params)[0]}
+        />
+      ) : (
+        <Card data={covid.country} flag={getBrCountry()} />
+      )}
       <Search />
       {arrayFlags.map(({ title, src, apiParams }, index) => (
         <List apiParams={apiParams} key={index} title={title} src={src} />

@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Body, Container, Header, Flag, Title } from './styles';
-
-import br from '../../assets/flags/BR.png';
 
 import Label from '../Label/';
 
-import formatData from '../../utils/dataFormmat';
+import { formatDataCountry } from '../../utils/dataFormmat';
 
 import { FaCheck } from 'react-icons/fa';
 import { FiInfo } from 'react-icons/fi';
@@ -13,6 +11,8 @@ import { ImWarning } from 'react-icons/im';
 import { GiHealthNormal, GiDeathSkull } from 'react-icons/gi';
 
 import { Country } from '../../store/modules/covid/types';
+import { useDispatch } from 'react-redux';
+import { getCountryInfo } from '../../store/modules/covid/actions';
 
 export interface IData {
   data: Country;
@@ -28,9 +28,10 @@ export interface IFlag {
 type Props = IData & IFlag;
 
 const Card: React.FC<Props> = ({ data, flag }) => {
-  const dataFormmated = formatData(data);
+  const dispatch = useDispatch();
+  const dataFormmated = formatDataCountry(data);
   return (
-    <Container>
+    <Container onClick={(e) => dispatch(getCountryInfo('brazil'))}>
       <Header>
         <Flag src={flag.src} />
         <Title>{flag.title}</Title>
