@@ -6,6 +6,7 @@ export enum CovidInfoTypes {
   INPUT_COUNTRY_INFO = 'INPUT_COUNTRY_INFO',
   GET_UF_INFO = 'GET_UF_INFO',
   INPUT_UF_INFO = 'INPUT_UF_INFO',
+  SEARCH = 'SEARCH',
 }
 
 export interface UF {
@@ -43,6 +44,7 @@ export interface InitialState {
   country: Country;
   uf: UF;
   params: string;
+  search: string;
 }
 
 export type CovidAction = ActionType<typeof actions>;

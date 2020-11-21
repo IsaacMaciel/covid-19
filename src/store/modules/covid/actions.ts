@@ -9,4 +9,7 @@ export const inputCountryInfo = (data: Country) =>
 export const getUFInfo = (UF: string) => action(CovidInfoTypes.GET_UF_INFO, UF);
 export const inputUFInfo = (data: UF) =>
   action(CovidInfoTypes.INPUT_UF_INFO, data);
+
+export const search = (search: string) => action(CovidInfoTypes.SEARCH, search);
+
 // export const inputUfInfo

@@ -27,6 +27,7 @@ const INITIAL_STATE: InitialState = {
     },
   },
   params: '',
+  search: '',
 };
 
 const reducer = (state = INITIAL_STATE, action: CovidAction) => {
@@ -42,6 +43,8 @@ const reducer = (state = INITIAL_STATE, action: CovidAction) => {
 
     case CovidInfoTypes.INPUT_UF_INFO:
       return { ...state, uf: action.payload };
+    case CovidInfoTypes.SEARCH:
+      return { ...state, search: action.payload };
 
     default:
       return state;

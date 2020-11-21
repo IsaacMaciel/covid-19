@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { StoreState } from '../../store/createStore';
 
 import { getCountryInfo, getUFInfo } from '../../store/modules/covid/actions';
+import { title } from 'process';
 
 const Content: React.FC = () => {
   const [arrayFlags, setArrayFlags] = useState(flags);
@@ -24,6 +25,16 @@ const Content: React.FC = () => {
     dispatch(getCountryInfo('brazil'));
     dispatch(getUFInfo('sp'));
   }, []);
+
+  useEffect(() => {
+    const arraySearch = flags.filter(({ title }) => {
+      const titleCompare = title.toLocaleLowerCase();
+      const searchCompare = covid.search.toLocaleLowerCase();
+
+      return titleCompare.includes(searchCompare);
+    });
+    setArrayFlags(arraySearch);
+  }, [covid.search]);
 
   const getBrCountry = () => {
     const br = flags.filter((flag) => flag.title === 'Brasil');
