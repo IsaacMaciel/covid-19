@@ -159,7 +159,7 @@ export default [
     apiParams: 'sp',
   },
   {
-    title: 'Segipe',
+    title: 'Sergipe',
     src: SE,
     apiParams: 'se',
   },

@@ -18,6 +18,8 @@ const Content: React.FC = () => {
   const [arrayFlags, setArrayFlags] = useState(flags);
 
   const covid = useSelector((state: StoreState) => state.covid);
+  const error = covid.error;
+
   console.log(covid);
 
   const dispatch = useDispatch();
@@ -25,6 +27,10 @@ const Content: React.FC = () => {
   useEffect(() => {
     dispatch(getCountryInfo('brazil'));
   }, []);
+
+  useEffect(() => {
+    error.isError && alert(error.message);
+  }, [error]);
 
   useEffect(() => {
     const arraySearch = flags.filter(({ title }) => {

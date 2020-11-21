@@ -7,6 +7,7 @@ export enum CovidInfoTypes {
   GET_UF_INFO = 'GET_UF_INFO',
   INPUT_UF_INFO = 'INPUT_UF_INFO',
   SEARCH = 'SEARCH',
+  ERROR = 'ERROR',
 }
 
 export interface UF {
@@ -43,6 +44,10 @@ export interface InitialState {
   uf: UF;
   params: string;
   search: string;
+  error: {
+    isError: boolean;
+    message: string;
+  };
 }
 
 export type CovidAction = ActionType<typeof actions>;

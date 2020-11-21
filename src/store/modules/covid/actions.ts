@@ -11,5 +11,6 @@ export const inputUFInfo = (data: UF) =>
   action(CovidInfoTypes.INPUT_UF_INFO, data);
 
 export const search = (search: string) => action(CovidInfoTypes.SEARCH, search);
+export const error = (error: string) => action(CovidInfoTypes.ERROR, error);
 
 // export const inputUfInfo

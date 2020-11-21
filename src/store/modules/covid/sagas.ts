@@ -11,8 +11,9 @@ export function* loadCountryInfo({
     const { data } = yield call(api.get, `/${country}`);
 
     yield put(actions.inputCountryInfo(data));
+    yield put(actions.error(''));
   } catch (error) {
-    console.log(error);
+    yield put(actions.error(error.message));
   }
 }
 
@@ -21,9 +22,13 @@ export function* loadUfInfo({ payload }: ActionType<typeof actions.getUFInfo>) {
     const UF = payload;
     const { data } = yield call(api.get, `/brazil/uf/${UF}`);
     // console.log('saga');
-    // console.log(data);
+    if (data.error) {
+      yield put(actions.error(data.error));
+      return;
+    }
     yield put(actions.inputUFInfo(data));
+    yield put(actions.error(''));
   } catch (error) {
-    console.log(error);
+    yield put(actions.error(error.message));
   }
 }

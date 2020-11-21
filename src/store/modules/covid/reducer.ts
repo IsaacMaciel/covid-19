@@ -25,6 +25,10 @@ const INITIAL_STATE: InitialState = {
   },
   params: '',
   search: '',
+  error: {
+    isError: false,
+    message: '',
+  },
 };
 
 const reducer = (state = INITIAL_STATE, action: CovidAction) => {
@@ -43,6 +47,13 @@ const reducer = (state = INITIAL_STATE, action: CovidAction) => {
       return { ...state };
     case CovidInfoTypes.SEARCH:
       return { ...state, search: action.payload };
+
+    case CovidInfoTypes.ERROR:
+      if (action.payload) {
+        return { ...state, error: { isError: true, message: action.payload } };
+      }
+
+      return { ...state, error: { isError: false, message: '' } };
 
     default:
       return state;
