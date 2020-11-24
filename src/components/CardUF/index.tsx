@@ -30,7 +30,7 @@ const CardUF: React.FC<Props> = ({ data, flag }) => {
 
   const dataFormmated = formatDataUF(data);
   return (
-    <Container>
+    <Container dataCy="uf-list">
       <Header>
         <Flag src={flag.src} />
         <Title>{flag.title}</Title>

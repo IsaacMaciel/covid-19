@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div.attrs((props) => ({
+  dataCy: 'uf-list',
+}))`
   width: 321px;
   height: auto;
   box-shadow: 0 1px 3px -1px rgba(32, 31, 31, 0.6);
