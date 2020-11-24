@@ -3,8 +3,6 @@ import { all, takeLatest } from 'redux-saga/effects';
 import { CovidInfoTypes } from './covid/types';
 import { loadCountryInfo, loadUfInfo } from './covid/sagas';
 
-// import { CovidInfoTypes } from './modules/reducer';
-
 export default function* rootSaga() {
   return yield all([
     takeLatest(CovidInfoTypes.GET_COUNTRY_INFO, loadCountryInfo),

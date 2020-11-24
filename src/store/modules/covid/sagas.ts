@@ -21,7 +21,6 @@ export function* loadUfInfo({ payload }: ActionType<typeof actions.getUFInfo>) {
   try {
     const UF = payload;
     const { data } = yield call(api.get, `/brazil/uf/${UF}`);
-    // console.log('saga');
     if (data.error) {
       yield put(actions.error(data.error));
       return;

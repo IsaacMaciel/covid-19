@@ -20,9 +20,6 @@ export interface UF {
   refuses: number;
   datetime: string;
 }
-// export interface RepositoriesUF {
-//   data: UF[];
-// }
 
 export interface Country {
   data: {
@@ -34,10 +31,6 @@ export interface Country {
     updated_at: string;
   };
 }
-
-// export interface RepositoriesCountry {
-//   readonly data: Country[];
-// }
 
 export interface InitialState {
   country: Country;

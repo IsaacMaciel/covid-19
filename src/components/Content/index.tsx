@@ -20,8 +20,6 @@ const Content: React.FC = () => {
   const covid = useSelector((state: StoreState) => state.covid);
   const error = covid.error;
 
-  console.log(covid);
-
   const dispatch = useDispatch();
 
   useEffect(() => {

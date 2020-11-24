@@ -26,14 +26,12 @@ export interface IFlag {
 type Props = IData & IFlag;
 
 const CardUF: React.FC<Props> = ({ data, flag }) => {
-  // console.log('CardUF');
-
   const dataFormmated = formatDataUF(data);
   return (
     <Container dataCy="uf-list">
       <Header>
         <Flag src={flag.src} />
-        <Title>{flag.title}</Title>
+        <Title>{data.state}</Title>
       </Header>
       <Body>
         <Label field="Casos" text={dataFormmated.cases}>

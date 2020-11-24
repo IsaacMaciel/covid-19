@@ -1,7 +1,6 @@
 import { Country, UF } from '../store/modules/covid/types';
 
 export const formatDataCountry = ({ data }: Country) => {
-  console.log('LogCountry: ' + data.updated_at);
   const date = new Date(data.updated_at);
   return {
     confirmed: String(
@@ -33,8 +32,6 @@ export const formatDataCountry = ({ data }: Country) => {
 };
 
 export const formatDataUF = (data: UF) => {
-  // console.log('Valor CARDUFDATA');
-  // console.log(data);
   const date = new Date(data.datetime);
   return {
     cases: String(
