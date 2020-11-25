@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const FormContainer = styled.form`
   display: flex;
+  justify-content: space-around;
   align-items: center;
 
   padding: 10px;
@@ -21,12 +22,4 @@ export const InputSearch = styled.input`
   height: 50%;
   background-color: #1a1a1d;
   color: #fff;
-
-  margin-left: 10px;
-  margin-right: 10px;
-`;
-
-export const ButtonSearch = styled.button`
-  cursor: pointer;
-  background-color: #1a1a1d;
 `;

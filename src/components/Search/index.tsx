@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormContainer, InputSearch, ButtonSearch } from './styles';
+import { FormContainer, InputSearch } from './styles';
 import { BsSearch } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { search } from '../../store/modules/covid/actions';
@@ -12,10 +12,6 @@ const Search: React.FC = () => {
         onChange={(e) => dispatch(search(e.target.value))}
         placeholder="Filtre o Estado que desejas"
       />
-
-      <ButtonSearch type="submit">
-        <BsSearch color={'#fff'} />
-      </ButtonSearch>
     </FormContainer>
   );
 };

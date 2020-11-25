@@ -2,7 +2,7 @@ import isLoadDataUf from '../../../utils/isLoadDataUF';
 
 import { InitialState, CovidInfoTypes, CovidAction } from './types';
 
-const INITIAL_STATE: InitialState = {
+export const INITIAL_STATE: InitialState = {
   country: {
     data: {
       country: '',

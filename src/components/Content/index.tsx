@@ -51,7 +51,6 @@ const Content: React.FC = () => {
       {' '}
       {covid.params !== '' ? (
         <CardUF
-          data-ci={'list-UF'}
           data={covid.uf}
           flag={flags.filter((flag) => flag.apiParams === covid.params)[0]}
         />
