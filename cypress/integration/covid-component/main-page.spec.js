@@ -6,8 +6,8 @@ const cardUf = {
   TITLE_CARD: '.sc-iqHYGH.chWaMa',
   CARD_BODY: '.sc-dQppl.hFqyJy',
 };
-const LIST_CONTAINER = '.sc-bqyKva.hFbVhV';
-const SEARCH = '.sc-bkzZxe.jzVNJi';
+const LIST_CONTAINER = '.sc-bqyKva.fHoqsS';
+const SEARCH = '.sc-bkzZxe.cLKYPF';
 
 // const TITLE_CARD = '.sc-gKsewC.hyuxfC';
 describe('Covid Ui', () => {
