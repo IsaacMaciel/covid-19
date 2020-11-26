@@ -27,6 +27,7 @@ type Props = IData & IFlag;
 
 const CardUF: React.FC<Props> = ({ data, flag }) => {
   const dataFormmated = formatDataUF(data);
+
   return (
     <Container dataCy="uf-list">
       <Header>

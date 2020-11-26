@@ -14,6 +14,8 @@ import { Country } from '../../store/modules/covid/types';
 import { useDispatch } from 'react-redux';
 import { getCountryInfo } from '../../store/modules/covid/actions';
 
+import percentInfo from '../../utils/percentInfo';
+
 export interface IData {
   data: Country;
 }
@@ -30,6 +32,7 @@ export type Props = IData & IFlag;
 const Card: React.FC<Props> = ({ data, flag }) => {
   const dispatch = useDispatch();
   const dataFormmated = formatDataCountry(data);
+  const percent = percentInfo(data);
   return (
     <Container onClick={(e) => dispatch(getCountryInfo('brazil'))}>
       <Header>
@@ -40,13 +43,22 @@ const Card: React.FC<Props> = ({ data, flag }) => {
         <Label field="Confirmados" text={dataFormmated.confirmed}>
           <FaCheck color="#27ae60" />
         </Label>
-        <Label field="Ativos" text={dataFormmated.cases}>
+        <Label
+          field="Ativos"
+          text={`${dataFormmated.cases} ( ${percent.cases} % )`}
+        >
           <ImWarning color="#d63031" />
         </Label>
-        <Label field="Recuperados" text={dataFormmated.recovered}>
+        <Label
+          field="Recuperados"
+          text={`${dataFormmated.recovered} ( ${percent.recovered} % )`}
+        >
           <GiHealthNormal color="#27ae60" />
         </Label>
-        <Label field="Mortos" text={dataFormmated.deaths}>
+        <Label
+          field="Mortos"
+          text={`${dataFormmated.deaths} ( ${percent.death} % )`}
+        >
           <GiDeathSkull color="#636e72" />
         </Label>
         <Label field="Atualizado em" text={dataFormmated.updated_at}>

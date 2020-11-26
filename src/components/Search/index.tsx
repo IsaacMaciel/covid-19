@@ -10,7 +10,7 @@ const Search: React.FC = () => {
     <FormContainer onSubmit={(e) => e.preventDefault()}>
       <InputSearch
         onChange={(e) => dispatch(search(e.target.value))}
-        placeholder="Filtre o Estado que desejas"
+        placeholder="Pesquisar"
       />
     </FormContainer>
   );

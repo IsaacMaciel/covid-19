@@ -9,6 +9,17 @@ export const Container = styled.div`
   color: #fff;
   margin: 10px auto;
 
+  border-radius: 10px;
+
+  &:hover {
+    border: 2px solid #27ae60;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
   cursor: pointer;
 `;
 

@@ -43,6 +43,7 @@ const CardCountry: React.FC = () => {
 export default {
   title: 'Card',
   component: CardCountry,
+  subComponents: Label,
 };
 
 export { CardCountry };

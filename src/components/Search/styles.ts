@@ -5,6 +5,8 @@ export const FormContainer = styled.form`
   justify-content: space-around;
   align-items: center;
 
+  border-radius: 10px;
+
   padding: 10px;
 
   height: 50px;
@@ -15,6 +17,11 @@ export const FormContainer = styled.form`
   margin-bottom: 20px;
 
   color: #fff;
+  font-weight: bold;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const InputSearch = styled.input`
@@ -22,4 +29,12 @@ export const InputSearch = styled.input`
   height: 50%;
   background-color: #1a1a1d;
   color: #fff;
+
+  border-radius: 5px;
+
+  text-align: center;
+  /* border-color: #202124; */
+  border: 2px solid #202124;
+  /* outline: 1px solid green; */
+  /* border-color: #fff; */
 `;
