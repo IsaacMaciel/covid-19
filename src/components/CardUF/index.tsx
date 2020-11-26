@@ -8,7 +8,7 @@ import { formatDataUF } from '../../utils/dataFormmat';
 import { FaCheck } from 'react-icons/fa';
 import { FiInfo } from 'react-icons/fi';
 import { ImWarning } from 'react-icons/im';
-import { GiHealthNormal, GiDeathSkull } from 'react-icons/gi';
+import { GiDeathSkull } from 'react-icons/gi';
 
 import { UF } from '../../store/modules/covid/types';
 
@@ -29,7 +29,7 @@ const CardUF: React.FC<Props> = ({ data, flag }) => {
   const dataFormmated = formatDataUF(data);
 
   return (
-    <Container dataCy="uf-list">
+    <Container>
       <Header>
         <Flag src={flag.src} />
         <Title>{data.state}</Title>

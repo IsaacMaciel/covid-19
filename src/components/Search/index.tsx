@@ -1,6 +1,5 @@
 import React from 'react';
 import { FormContainer, InputSearch } from './styles';
-import { BsSearch } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { search } from '../../store/modules/covid/actions';
 

@@ -33,8 +33,5 @@ export const InputSearch = styled.input`
   border-radius: 5px;
 
   text-align: center;
-  /* border-color: #202124; */
   border: 2px solid #202124;
-  /* outline: 1px solid green; */
-  /* border-color: #fff; */
 `;

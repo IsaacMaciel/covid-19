@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Body, Text, Flag } from './styles';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { StoreState } from '../../store/createStore';
+import { useDispatch } from 'react-redux';
 import { getUFInfo } from '../../store/modules/covid/actions';
 
 export interface Flag {
@@ -12,10 +11,8 @@ export interface Flag {
 }
 
 const List: React.FC<Flag> = ({ title, src, apiParams }) => {
-  const [cliked, setClicked] = useState(false);
   const dispatch = useDispatch();
   const handleClick = () => {
-    setClicked(true);
     dispatch(getUFInfo(apiParams));
   };
   return (

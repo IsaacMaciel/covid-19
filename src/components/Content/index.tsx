@@ -7,12 +7,10 @@ import CardUF from '../CardUF';
 import List from '../List';
 import Search from '../Search';
 
-import { InitialState } from '../../store/modules/covid/types';
 import { useSelector, useDispatch } from 'react-redux';
 import { StoreState } from '../../store/createStore';
 
-import { getCountryInfo, getUFInfo } from '../../store/modules/covid/actions';
-import { title } from 'process';
+import { getCountryInfo } from '../../store/modules/covid/actions';
 
 const Content: React.FC = () => {
   const [arrayFlags, setArrayFlags] = useState(flags);

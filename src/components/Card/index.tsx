@@ -34,7 +34,7 @@ const Card: React.FC<Props> = ({ data, flag }) => {
   const dataFormmated = formatDataCountry(data);
   const percent = percentInfo(data);
   return (
-    <Container onClick={(e) => dispatch(getCountryInfo('brazil'))}>
+    <Container onClick={() => dispatch(getCountryInfo('brazil'))}>
       <Header>
         <Flag src={flag.src} />
         <Title>{flag.title}</Title>

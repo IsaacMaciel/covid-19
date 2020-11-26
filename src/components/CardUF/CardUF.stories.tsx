@@ -7,13 +7,13 @@ import flags from '../../utils/loaderFlags';
 import { FaCheck } from 'react-icons/fa';
 import { FiInfo } from 'react-icons/fi';
 import { ImWarning } from 'react-icons/im';
-import { GiHealthNormal, GiDeathSkull } from 'react-icons/gi';
+import { GiDeathSkull } from 'react-icons/gi';
 
 const CardUF: React.FC = () => {
   const flag = flags.filter((flag) => flag.title === 'Pernambuco')[0];
 
   return (
-    <Container dataCy="uf-list">
+    <Container>
       <Header>
         <Flag src={flag.src} />
         <Title>{flag.title}</Title>
