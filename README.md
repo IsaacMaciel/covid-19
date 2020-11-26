@@ -9,7 +9,7 @@
 
 ## :book: Sobre o Projeto
 
-Covid Brasil tem como finalidade mostrar de forma clara as estatísticas da Covid-19 no território Brasileiro.
+Covid Brasil tem como finalidade mostrar de forma clara as estatísticas da Covid-19 no território Brasileiro. Ele pode ser acesso atraves desse link: https://br-covid.netlify.app/
 
 ### Funcionalidades:
 
